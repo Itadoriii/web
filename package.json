@@ -1,0 +1,22 @@
+{
+  "name": "sebasweb",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Itadoriii/web.git"
+  },
+  "author": "Itadoriii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Itadoriii/web/issues"
+  },
+  "homepage": "https://github.com/Itadoriii/web#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
