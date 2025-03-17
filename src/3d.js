@@ -23,7 +23,7 @@ scene.add(directionalLight);
 const loader = new THREE.GLTFLoader();
 let modelPC = null;
 
-loader.load('home/sebasti9/code/src/models/galaxy2.glb', function (gltf) {
+loader.load('models/galaxy2.glb', function (gltf) {
   modelPC = gltf.scene;
   modelPC.position.set(0, 0, 0);
   modelPC.rotation.y = -2 * Math.PI / 3;
@@ -36,7 +36,7 @@ loader.load('home/sebasti9/code/src/models/galaxy2.glb', function (gltf) {
 camera.position.set(0, 1, 3);
 
 // Velocidad de rotación (ajustable)
-const rotationSpeed = 0.001;
+const rotationSpeed = 0.0005;
 
 // Animación para renderizar la escena
 function animate() {
