@@ -23,7 +23,7 @@ scene.add(directionalLight);
 const loader = new THREE.GLTFLoader();
 let modelPC = null;
 
-loader.load('models/galaxy2.glb', function (gltf) {
+loader.load('home/sebasti9/code/src/models/galaxy2.glb', function (gltf) {
   modelPC = gltf.scene;
   modelPC.position.set(0, 0, 0);
   modelPC.rotation.y = -2 * Math.PI / 3;
