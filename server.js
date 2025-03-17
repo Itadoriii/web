@@ -8,7 +8,7 @@ const PORT = 3000;
 app.use(express.static(path.join(__dirname, "src")));
 
 // Ruta principal que sirve index.html
-app.get("/", (req, res) => {
+app.get("/repo", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "index.html"));
 });
 
