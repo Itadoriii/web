@@ -1,19 +1,27 @@
-const toggleButton = document.getElementById('darkModeToggle');
-const darkModeIcon = document.getElementById('darkModeIcon');
-const navbar = document.getElementById('navbar');
-    
-toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  document.body.classList.toggle('light-mode');
-  navbar.classList.toggle('navbar-dark');
-  navbar.classList.toggle('bg-dark');
-  navbar.classList.toggle('navbar-light');
-  navbar.classList.toggle('bg-light');
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contacto = document.getElementById("contacto");
+  const navbar = document.getElementById("navbar");
+  const footerSpacer = document.getElementById("footer-spacer");
   
-  if (document.body.classList.contains('dark-mode')) {
-    darkModeIcon.classList.replace('fa-moon', 'fa-sun');
-  } else {
-    darkModeIcon.classList.replace('fa-sun', 'fa-moon');
-  }
+  // Posición final para que contacto se quede pegado en la parte superior de la ventana
+  const navbarHeight = navbar.offsetHeight;
+
+  window.addEventListener("scroll", function () {
+    const contactoTop = contacto.getBoundingClientRect().top;
+    const contactoBottom = contacto.getBoundingClientRect().bottom;
+
+    // Detectar si el contacto ha tocado el navbar
+    if (contactoTop <= navbarHeight) {
+      contacto.classList.add("fixed");
+    } else {
+      contacto.classList.remove("fixed");
+    }
+
+    // Si el contacto está tocando el footer spacer, dejar de moverse
+    if (contactoBottom >= footerSpacer.getBoundingClientRect().top) {
+      contacto.classList.remove("fixed");
+    }
+  });
 });
 
