@@ -8,11 +8,11 @@ const PORT = 3000;
 app.use(express.static(path.join(__dirname, "src")));
 
 // Ruta principal que sirve index.html
-app.get("/repo", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "index.html"));
 });
 
 // Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}/repo`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}/`);
 });
